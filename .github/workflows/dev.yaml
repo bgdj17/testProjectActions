@@ -10,12 +10,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v3
-            - name: Using Nodejs
+            - name: Baixar repos
+              uses: actions/checkout@v3
+            - name: Versão Nodejs
               uses: actions/setup-node@v2
               with:
                 node-version: 18.12.0
-            - name: install
+            - name: install Node e rodar build
               run: |
                yarn install
                yarn build
