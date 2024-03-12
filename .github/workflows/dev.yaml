@@ -1,0 +1,24 @@
+name: Continuos Integrations
+
+on:
+    push:
+        branches: 
+            ['master']
+
+jobs:
+    continuos-integrations:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Using Nodejs
+              uses: actions/setup-node@v2
+              with:
+                node-version: 18.12.0
+            - name: install
+              run: |
+               yarn install
+               yarn build
+
+
+             
