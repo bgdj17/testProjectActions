@@ -16,10 +16,10 @@ jobs:
               uses: actions/setup-node@v2
               with:
                 node-version: 18.12.0
-            - name: install Node e rodar build
+            - name: install Node
               run: |
                yarn install
-               yarn build
-
+            - name: rodar build
+              run: yarn build
 
              
