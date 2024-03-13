@@ -4,6 +4,9 @@ on:
     push:
         branches: 
             ['master']
+    pull_request:
+        branches: 
+            ['master']
 
 jobs:
     continuos-integrations:
@@ -16,9 +19,8 @@ jobs:
               uses: actions/setup-node@v2
               with:
                 node-version: 18.12.0
-            - name: install Node
-              run: |
-               yarn install
+            - name: instalar Node
+              run: yarn install
             - name: rodar build
               run: yarn build
 

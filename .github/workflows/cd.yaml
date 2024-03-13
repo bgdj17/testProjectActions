@@ -1,0 +1,31 @@
+name: Continuos Delivery
+
+env:
+    VERCEL_TOKEN: ${{secrets.VERCEL_TOKEN}}
+    VERCEL_ORG_ID: ${{secrets.VERCEL_ORG_ID}}
+    VERCEL_PROJECT_ID: ${{secrets.VERCEL_PROJECT_ID}}
+
+
+on: 
+    push:
+        branches: ['master']
+
+jobs:
+    deploy-vercel:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Baixar repos
+              uses: actions/checkout@v3
+            - name: Versão Nodejs
+              uses: actions/setup-node@v2
+              with:
+                node-version: 18.12.0
+            - name: instalar Node
+              run: yarn install
+            - name: rodar build
+              run: yarn build
+            - name: deploy vercel
+              run: deploy:prod
+
+
