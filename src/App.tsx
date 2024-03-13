@@ -1,9 +1,10 @@
 function App() {
   return (
     <>
-      <div>
+      <h1>
         Github Actions
-      </div>
+      </h1>
+      <h3>Aplicando alterações com o CD funcionando</h3>
     </>
   )
 }
