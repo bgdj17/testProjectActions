@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "deploy":"yarn build && npx vercel ./ --confirm --no-clipboard",
-    "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN"
+    "prod": "yarn deploy --prod --token=$VERCEL_TOKEN"
   },
   "dependencies": {
     "react": "^18.2.0",

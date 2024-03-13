@@ -24,6 +24,6 @@ jobs:
             - name: instalar Node
               run: yarn install
             - name: deploy vercel
-              run: deploy:prod
+              run: prod
 
 
