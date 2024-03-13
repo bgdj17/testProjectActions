@@ -23,8 +23,6 @@ jobs:
                 node-version: 18.12.0
             - name: instalar Node
               run: yarn install
-            - name: rodar build
-              run: yarn build
             - name: deploy vercel
               run: deploy:prod
 
