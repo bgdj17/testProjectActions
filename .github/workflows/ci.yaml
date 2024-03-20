@@ -1,6 +1,6 @@
 name: Continuos Integrations
 
-run-name: CI ${{ GITHUB_REPOSITORY}} by @${{ github.actor }}
+run-name: CI @${{ github.actor }}
 
 on:
     push:
