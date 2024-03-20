@@ -1,5 +1,7 @@
 name: Continuos Integrations
 
+run-name: CI ${{ GITHUB_REPOSITORY.ID}} by @${{ github.actor }}
+
 on:
     push:
         branches: 
